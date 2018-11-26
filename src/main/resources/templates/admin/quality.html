@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>质保管理 | 首页 | 聚福缘</title>
+
+<link th:href="@{/css/bootstrap.css}" rel="stylesheet" />
+<link th:href="@{/font-awesome/css/font-awesome.css}" rel="stylesheet" />
+<link th:href="@{/css/plugins/footable/footable.core.css}"
+	rel="stylesheet" />
+<link th:href="@{/css/plugins/datapicker/datepicker3.css}"
+	rel="stylesheet">
+
+<link th:href="@{/css/animate.css}" rel="stylesheet" />
+<link th:href="@{/css/admin/style.css}" rel="stylesheet" />
+<link th:href="@{/css/sweetalert.css}" rel="stylesheet">
+
+</head>
+
+<body>
+	<div id="wrapper">
+		<nav class="navbar-default navbar-static-side" role="navigation"
+			th:include="/admin/nav :: navigation"></nav>
+		<div id="page-wrapper" class="gray-bg">
+			<div class="border-bottom" th:include="/admin/header :: headerTop"></div>
+			<div class="wrapper wrapper-content animated fadeInRight">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="ibox float-e-margins">
+							<div class="ibox-title">
+								<h5>搜索&amp;操作</h5>
+								<div class="ibox-tools">
+									<a class="collapse-link"> <i class="fa fa-chevron-up"></i>
+									</a>
+								</div>
+							</div>
+							<div class="ibox-content" style="display: block;">
+								<div class="row">
+
+									<div class="col-sm-3">
+										<div class="form-group z_mb0">
+											<button type="button" class="btn btn-primary"
+												data-toggle="modal" data-target="#myModal">添加新质保</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-12">
+						<div class="ibox float-e-margins">
+							<div class="ibox-title">
+								<h5>质保列表</h5>
+								<div class="ibox-tools">
+									<a class="collapse-link"> <i class="fa fa-chevron-up"></i>
+									</a>
+								</div>
+							</div>
+							<div class="ibox-content">
+								<div class="table-responsive">
+									<input type="text" class="form-control input-sm m-b-xs"
+										id="filter" placeholder="输入要检索的关键词......">
+									<table
+										class="table table-bordered table-hover dataTables-example footable"
+										data-page-size="12" data-filter=#filter>
+										<thead>
+											<tr>
+												<th>车牌号码</th>
+												<th data-hide="phone,tablet">贴膜时间</th>
+												<th data-hide="phone,tablet">质保年限</th>
+												<th>操作</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr th:each="p,productStat:${item_qa}">
+												<td th:text="${p.code}"></td>
+												<td th:text=${#dates.format(p.addtime,"yyyy-MM-dd")}></td>
+												<td th:text="${p.year}"></td>
+												<td>
+													<button class="btn btn-info btn-xs dropdown-toggle"
+														type="button" data-toggle="modal" data-target="#myModal"
+														th:onclick="|javascript:showInfo(${p.id})|">
+														<i class="fa fa-edit"></i>编辑
+													</button>
+													<button class="btn btn-danger btn-xs dropdown-toggle"
+														type="button" th:onclick="|javascript:deleteInfo(${p.id})|">
+														<i class="fa fa-trash"></i>删除
+													</button>
+												</td>
+											</tr>
+										</tbody>
+										<tfoot>
+											<tr>
+												<td colspan="4">
+													<ul class="pagination pull-center"></ul>
+												</td>
+											</tr>
+										</tfoot>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer" th:include="/admin/footer :: copyright"></div>
+		</div>
+	</div>
+
+	<div class="modal inmodal" id="myModal" tabindex="-1" role="dialog"
+		aria-hidden="true" style="display: none;">
+		<div class="modal-dialog">
+			<form class="form-horizontal" method="post" id="myform">
+				<div class="modal-content animated bounceInRight">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">
+							<span aria-hidden="true">×</span><span class="sr-only">Close</span>
+						</button>
+						<h4 class="modal-title">质保信息</h4>
+					</div>
+						<div class="modal-body">
+							<div class="form-group">
+								<label class="col-lg-3 control-label">车牌号码</label>
+								<div class="col-lg-9">
+									<input type="text" placeholder="请输入车牌号码 " class="form-control"
+										required="" name="code" id="code"> <input
+										type="hidden" name="id" value="0" id="id"> <input
+										type="hidden" name="mode" value="POST" id="mode">
+								</div>
+							</div>
+							<div class="form-group" id="s_date">
+								<label class="col-lg-3 control-label">开始日期</label>
+								<div class="col-lg-9">
+									<div class="input-group date">
+										<span class="input-group-addon"><i
+											class="fa fa-calendar"></i></span><input type="text"
+											class="form-control" name="addtime" id="addtime">
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-lg-3 control-label">质保年限</label>
+								<div class="col-lg-9">
+									<input type="text" placeholder="请输入质保年限" class="form-control"
+										required="" name="year" id="year">
+								</div>
+							</div>
+						</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-white" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary" id="btn_submit">确认保存</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<!-- Mainly scripts -->
+	<script th:src="@{/js/jquery-3.1.1.min.js}"></script>
+	<script th:src="@{/js/jquery.validate.min.js}"></script>
+	<script th:src="@{/js/bootstrap.min.js}"></script>
+	<script th:src="@{/js/quality.js}"></script>
+	<script th:src="@{/js/plugins/metisMenu/jquery.metisMenu.js}"></script>
+	<script th:src="@{/js/plugins/slimscroll/jquery.slimscroll.min.js}"></script>
+	<script type="text/javascript" th:src="@{/js/sweetalert.min.js}"></script>
+
+
+	<!-- Custom and plugin javascript -->
+	<script th:src="@{/js/inspinia.js}"></script>
+	<script th:src="@{/js/plugins/pace/pace.min.js}"></script>
+	<script th:src="@{/js/plugins/datapicker/bootstrap-datepicker.js}"></script>
+	<!-- FooTable -->
+	<script th:src="@{/js/plugins/footable/footable.all.min.js}"></script>
+
+	<script>
+		$(document).ready(function() {
+			$('#s_date .input-group.date').datepicker({
+				todayBtn : "linked",
+				keyboardNavigation : false,
+				clearBtn : true,//清除按钮
+				forceParse : false,
+				autoclose : true,
+				format : "yyyy-mm-dd",
+			});
+			$('.footable').footable();
+		});
+	</script>
+</body>
+</html>

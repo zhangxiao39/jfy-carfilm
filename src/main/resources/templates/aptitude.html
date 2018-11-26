@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>资质证书 | 聚福缘</title>
+<!-- meta-tags -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<script type="application/x-javascript">
+	 addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
+</script>
+<!-- //meta-tags -->
+<!-- Custom Theme files -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css"
+	media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/jfy.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/font-awesome.css" rel="stylesheet">
+<!-- font-awesome icons -->
+<!-- //Custom Theme files -->
+<!-- js -->
+<script src="js/jquery-1.11.1.min.js"></script>
+<!-- //js -->
+<!-- web-font -->
+<link
+	href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900'
+	rel='stylesheet' type='text/css'>
+<!-- //web-font -->
+</head>
+<body>
+	<!-- header -->
+	<div class="header" th:replace="/header::header"></div>
+	<!-- //header -->
+	<!-- about -->
+	<div class="about zxbb">
+		<div class="container">
+			<h2>资质证书</h2>
+			<p class="news-wthreetext">沈阳聚福缘窗膜是一家专业从事汽车膜建筑膜的专业服务商，公司具有完整的企业形象，一流的科技产品，完善的管理制度，优秀的售后服务，高效的销售团队，专业的施工队伍。</p>
+			<div class="w3layouts-text">
+				<img src="images/2.jpg" alt=" " class="img-responsive" />
+				<p>沈阳聚福缘窗膜现在已经形成拥有，汽车膜
+					建筑膜省级代理商和各地特约经销商为骨干的全国性营销网络，通过发展品牌化经营，整合市场资源，完善销售渠道等一系列营销举措，力争把视美佳、俪景，米纳兹窗膜品牌做成国内高端太阳膜市场份额名列前茅的市场地位。
+					沈阳聚福缘窗膜以市场为主线，以客户需求为动力，推出最具科技含量和最具性价比的产品。</p>
+			</div>
+		</div>
+	</div>
+	<!-- //about -->
+	<!-- footer -->
+	<div class="footer" th:replace="/footer::footer"></div>
+	<!-- //footer -->
+	<!-- start-smooth-scrolling -->
+	<script type="text/javascript" src="js/move-top.js"></script>
+	<script type="text/javascript" src="js/easing.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event) {
+				event.preventDefault();
+
+				$('html,body').animate({
+					scrollTop : $(this.hash).offset().top
+				}, 1000);
+			});
+		});
+	</script>
+	<!-- //end-smooth-scrolling -->
+	<!-- smooth-scrolling-of-move-up -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+			var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+			};
+			 */
+
+			$().UItoTop({
+				easingType : 'easeOutQuart'
+			});
+
+		});
+	</script>
+	<!-- //smooth-scrolling-of-move-up -->
+	<!-- for bootstrap working -->
+	<script src="js/bootstrap.js">
+		
+	</script>
+	<!-- //for bootstrap working -->
+</body>
+</html>

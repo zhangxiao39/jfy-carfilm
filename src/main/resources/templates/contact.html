@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>联系我们 | 聚福缘</title>
+<!-- meta-tags -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<script type="application/x-javascript">
+	
+	 addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
+
+</script>
+<!-- //meta-tags -->
+<!-- Custom Theme files -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css"
+	media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/font-awesome.css" rel="stylesheet">
+<!-- font-awesome icons -->
+<!-- //Custom Theme files -->
+<!-- js -->
+<script src="js/jquery-1.11.1.min.js"></script>
+<!-- //js -->
+<!-- web-font -->
+<link
+	href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900'
+	rel='stylesheet' type='text/css'>
+<!-- //web-font -->
+</head>
+<body>
+	<!-- header -->
+	<div class="header" th:replace="/header::header"></div>
+	<!-- //header -->
+	<!-- contact -->
+	<div class="contact agileits-w3layouts zxbb">
+		<div class="container">
+			<div class="contact-w3layouts">
+				<h2>联系我们</h2>
+				<div class="contact-agileinfo">
+					<div class="col-md-6 contact-wthree-left">
+						<p>沈阳市聚福缘汽车用品有限公司</p>
+						<div class="footer-grid-address">
+							<p>地址：南阳湖街72栋</p>
+							<p>电话：15904041345</p>
+							<p>联系人： 高先生</p>
+						</div>
+					</div>
+					<div class="col-md-6 contact-wthree-right">
+						<div class="contact-w3-agileits">
+							<form action="#" method="post">
+								<input type="text" name="Name" placeholder="First Name"
+									required="" /> <input type="text" name="Phone Number"
+									placeholder="Phone Number" required="" /> <input type="text"
+									name="Email" placeholder="Email" required="" />
+								<textarea name="Message" placeholder="Message" required=""></textarea>
+								<input type="submit" value="SUBMIT"> <input type="reset"
+									value="CLEAR">
+							</form>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //contact -->
+	<!-- footer -->
+	<div class="footer" th:replace="/footer::footer"></div>
+	<!-- //footer -->
+	<!-- start-smooth-scrolling -->
+	<script type="text/javascript" src="js/move-top.js"></script>
+	<script type="text/javascript" src="js/easing.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event) {
+				event.preventDefault();
+
+				$('html,body').animate({
+					scrollTop : $(this.hash).offset().top
+				}, 1000);
+			});
+		});
+	</script>
+	<!-- //end-smooth-scrolling -->
+	<!-- smooth-scrolling-of-move-up -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+			var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+			};
+			 */
+
+			$().UItoTop({
+				easingType : 'easeOutQuart'
+			});
+
+		});
+	</script>
+	<!-- //smooth-scrolling-of-move-up -->
+	<!-- for bootstrap working -->
+	<script src="js/bootstrap.js">
+		
+	</script>
+	<!-- //for bootstrap working -->
+</body>
+</html>

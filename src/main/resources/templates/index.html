@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>首页 | 聚福缘</title>
+<!-- meta-tags -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<script type="application/x-javascript">
+	
+	
+	 addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
+
+
+</script>
+<!-- //meta-tags -->
+<!-- Custom Theme files -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css"
+	media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/jfy.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/font-awesome.css" rel="stylesheet">
+<link href="css/sweetalert.css" rel="stylesheet">
+<!-- font-awesome icons -->
+<!-- //Custom Theme files -->
+<!-- js -->
+<script src="js/jquery-1.11.1.min.js"></script>
+<!-- //js -->
+<!-- web-font -->
+<link
+	href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900'
+	rel='stylesheet' type='text/css'>
+<!-- //web-font -->
+</head>
+<body>
+	<!-- header -->
+	<div class="header" th:replace="/header::header"></div>
+	<!-- //header -->
+	<!-- banner -->
+	<div class="banner">
+		<!-- Slider-starts-Here -->
+		<script src="js/responsiveslides.min.js"></script>
+		<script>
+			// You can also use "$(window).load(function() {"
+			$(function() {
+				// Slideshow 3
+				$("#slider3").responsiveSlides({
+					auto : true,
+					pager : true,
+					nav : false,
+					speed : 500,
+					namespace : "callbacks",
+					before : function() {
+						$('.events').append("<li>before event fired.</li>");
+					},
+					after : function() {
+						$('.events').append("<li>after event fired.</li>");
+					}
+				});
+
+			});
+		</script>
+		<!-- //End-slider-script -->
+		<div id="top" class="callbacks_container">
+			<ul class="rslides" id="slider3">
+				<li>
+					<div class="banner-info">
+						<div class="baner-w3text">
+							<h3>视美佳</h3>
+							<p>We have been selling good quality film.</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="banner-info1">
+						<div class="baner-w3text">
+							<h3>俪景</h3>
+							<p>Our car film is guaranteed for life.</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="banner-info2">
+						<div class="baner-w3text">
+							<h3>米纳兹</h3>
+							<p>Please rest assured to buy our car membrane</p>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="banner-bottom-grids">
+			<div class="container">
+				<div class="col-md-3 banner-bottom-grid">
+					<div class="banner-bottom-grd w3-agile-back">
+						<h4>视美佳</h4>
+						<p>
+							fugiat quo<span> voluptas</span>
+						</p>
+						<div class="clearfix"></div>
+					</div>
+					<p class="w3ltext">不仅仅是隔热，更是体现一种质感的美！</p>
+					<div class="more more4">
+						<a href="/product">Read More</a>
+					</div>
+				</div>
+				<div class="col-md-3 banner-bottom-grid">
+					<div class="banner-bottom-grd w3-agile-back1">
+						<h4>俪景</h4>
+						<p>
+							voluptas <span> fugiat quo </span>
+						</p>
+						<div class="clearfix"></div>
+					</div>
+					<p class="w3ltext">品质值得您的信赖！</p>
+					<div class="more more1">
+						<a href="/product">Read More</a>
+					</div>
+				</div>
+				<div class="col-md-3 banner-bottom-grid">
+					<div class="banner-bottom-grd w3-agile-back2">
+						<h4>米纳兹</h4>
+						<p>
+							officiis aut <span> debitis </span>
+						</p>
+						<div class="clearfix"></div>
+					</div>
+					<p class="w3ltext">给您一个健康。安全的空间！</p>
+					<div class="more more2">
+						<a href="/product">Read More</a>
+					</div>
+				</div>
+				<div class="col-md-3 banner-bottom-grid">
+					<div class="banner-bottom-grd w3-agile-back3">
+						<h4>其他</h4>
+						<p>
+							saepe utet <span> eveniet</span>
+						</p>
+						<div class="clearfix"></div>
+					</div>
+					<p class="w3ltext">Temporibus autem quibusdam et aut officiis
+						debitis aut rerum necessitatibus saepe eveniet ut et voluptates.</p>
+					<div class="more more3">
+						<a href="/product">Read More</a>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+	<!-- //banner -->
+	<div class="tlinks">
+		Collect from <a href="http://www.cssmoban.com/">网页模板</a>
+	</div>
+	<!-- welcome -->
+	<div class="welcome w3-agileits">
+		<div class="container">
+			<h2>欢迎您！</h2>
+			<div class="banner-agileits-w3layouts">
+				<div class="col-md-4 welcome-grid">
+					<img src="images/welcome-image.png" alt=" " class="img-responsive" />
+				</div>
+				<div class="col-md-8 welcome-grid">
+					<h4>沈阳聚福缘窗膜是一家专业从事汽车膜建筑膜的专业服务商，公司具有完整的企业形象，一流的科技产品，完善的管理制度，优秀的售后服务，高效的销售团队，专业的施工队伍。</h4>
+					<p>沈阳聚福缘窗膜现在已经形成拥有，汽车膜
+						建筑膜省级代理商和各地特约经销商为骨干的全国性营销网络，通过发展品牌化经营，整合市场资源，完善销售渠道等一系列营销举措，力争把视美佳、俪景，米纳兹窗膜品牌做成国内高端太阳膜市场份额名列前茅的市场地位。
+						沈阳聚福缘窗膜以市场为主线，以客户需求为动力，推出最具科技含量和最具性价比的产品。</p>
+					<div class="more">
+						<a href="/about">Read More</a>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+	<!-- //welcome -->
+	<!-- newsletter -->
+	<div class="newsletter">
+		<div class="container">
+			<div class="get-in-grids">
+				<div class="get-in-grid-left">
+					<p>质保查询</p>
+				</div>
+				<div class="get-in-grid-right">
+					<form action="#" method="post">
+						<input type="text" name="txt_carcode" Placeholder="请输入您的车牌号码...."
+							required="" id="txt_carcode"> <input type="button" value="查询" id="btn_search">
+					</form>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+	<!-- //newsletter -->
+	<!-- news -->
+	<div class="news zx-hiden">
+		<div class="container">
+			<h3>News & Events</h3>
+			<p class="news-wthreetext">Vel illum qui dolorem eum aliquid ex
+				ea commodi consequatur vel illum qui dolorem eum fugiat quo voluptas</p>
+			<div class="news-agileinfo">
+				<div class="col-md-6 news-grid">
+					<div class="col-xs-4 news-grid-left">
+						<p>
+							22nd<span>Sept</span>
+						</p>
+					</div>
+					<div class="col-xs-8 news-grid-right">
+						<p>Itaque earum rerum hic tenetur a sapiente delectus, ut aut
+							reiciendis voluptatibus maiores alias consequatur aut perferendis
+							doloribus asperiores repellat.</p>
+						<div class="more">
+							<a href="single.html">Read More</a>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="col-md-6 news-grid">
+					<div class="col-xs-4 news-grid-left">
+						<p>
+							28th<span>Sept</span>
+						</p>
+					</div>
+					<div class="col-xs-8 news-grid-right">
+						<p>Itaque earum rerum hic tenetur a sapiente delectus, ut aut
+							reiciendis voluptatibus maiores alias consequatur aut perferendis
+							doloribus asperiores repellat.</p>
+						<div class="more">
+							<a href="single.html">Read More</a>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="news-agileinfo">
+				<div class="col-md-6 news-grid">
+					<div class="col-xs-4 news-grid-left">
+						<p>
+							11th<span>Oct</span>
+						</p>
+					</div>
+					<div class="col-xs-8 news-grid-right">
+						<p>Itaque earum rerum hic tenetur a sapiente delectus, ut aut
+							reiciendis voluptatibus maiores alias consequatur aut perferendis
+							doloribus asperiores repellat.</p>
+						<div class="more">
+							<a href="single.html">Read More</a>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="col-md-6 news-grid">
+					<div class="col-xs-4 news-grid-left">
+						<p>
+							25th<span>Oct</span>
+						</p>
+					</div>
+					<div class="col-xs-8 news-grid-right">
+						<p>Itaque earum rerum hic tenetur a sapiente delectus, ut aut
+							reiciendis voluptatibus maiores alias consequatur aut perferendis
+							doloribus asperiores repellat.</p>
+						<div class="more">
+							<a href="single.html">Read More</a>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+	<!-- //news -->
+	<!-- customer -->
+	<div class="customer zx-hiden">
+		<div class="container">
+			<h3>Customer Says</h3>
+			<div class="customer-w3layoutsgrids">
+				<ul id="flexiselDemo1">
+					<li>
+						<div class="customer-grid">
+							<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit
+								amet, consectetur, adipisci velit, sed quia non numquam eius
+								modi tempora incidunt ut labore et dolore magnam aliquam quaerat
+								voluptatem.</p>
+							<h4>John Smith</h4>
+						</div>
+					</li>
+					<li>
+						<div class="customer-grid">
+							<p>Sed quia non numquam eius modi tempora neque porro
+								quisquam est, qui dolorem ipsum quia dolor sit amet,
+								consectetur, adipisci velit, incidunt ut labore et dolore magnam
+								aliquam quaerat voluptatem.</p>
+							<h4>Micheal Robert</h4>
+						</div>
+					</li>
+					<li>
+						<div class="customer-grid">
+							<p>Qui dolorem ipsum quia dolor sit amet, veque porro
+								quisquam est, consectetur, adipisci velit, sed quia non numquam
+								eius modi tempora incidunt ut labore et dolore magnam aliquam
+								quaerat voluptatem.</p>
+							<h4>Williumson</h4>
+						</div>
+					</li>
+				</ul>
+				<script type="text/javascript">
+					$(window).load(function() {
+						$("#flexiselDemo1").flexisel({
+							visibleItems : 3,
+							animationSpeed : 1000,
+							autoPlay : true,
+							autoPlaySpeed : 3000,
+							pauseOnHover : true,
+							enableResponsiveBreakpoints : true,
+							responsiveBreakpoints : {
+								portrait : {
+									changePoint : 480,
+									visibleItems : 1
+								},
+								landscape : {
+									changePoint : 640,
+									visibleItems : 2
+								},
+								tablet : {
+									changePoint : 768,
+									visibleItems : 2
+								}
+							}
+						});
+
+					});
+				</script>
+				<script type="text/javascript" src="js/jquery.flexisel.js"></script>
+			</div>
+		</div>
+	</div>
+	<!-- //customer -->
+	<!-- footer -->
+	<div class="footer" th:replace="/footer::footer"></div>
+	<div class="copy-right">
+		<p>
+			Copyright &copy; 2019.Company name All rights reserved.More Templates
+			<a href="/" target="_blank" title="聚福缘车膜">聚福缘车膜</a>
+		</p>
+	</div>
+	<!-- //footer -->
+	<!-- start-smooth-scrolling -->
+	<script type="text/javascript" src="js/sweetalert.min.js"></script>
+	<script type="text/javascript" src="js/move-top.js"></script>
+	<script type="text/javascript" src="js/easing.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event) {
+				event.preventDefault();
+
+				$('html,body').animate({
+					scrollTop : $(this.hash).offset().top
+				}, 1000);
+			});
+		});
+	</script>
+	<!-- //end-smooth-scrolling -->
+	<!-- smooth-scrolling-of-move-up -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+			var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+			};
+			 */
+
+			$().UItoTop({
+				easingType : 'easeOutQuart'
+			});
+
+		});
+	</script>
+	<!-- //smooth-scrolling-of-move-up -->
+	<!-- for bootstrap working -->
+	<script src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/search.js"></script>
+	<!-- //for bootstrap working -->
+</body>
+</html>
